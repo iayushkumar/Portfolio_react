@@ -7,6 +7,7 @@ import TextMaster from '../assets/images/Text Master.png'
 import Notehub from '../assets/images/Notehub.png'
 import Identification from '../assets/images/Identification.jpg'
 import Wine from '../assets/images/wine.png'
+import "./Styles.css"
 const Webapp=[
     {
      link:"https://github.com/iayushkumar/BloggingApplication?tab=readme-ov-file",
@@ -56,13 +57,22 @@ const Projects = () => {
 
 
     const projectCard = (web) => {
+        const getWidthStyle = () => {
+            if (window.innerWidth >= 1280) {
+                return { width: '500px' };
+            } else if (window.innerWidth >= 640) {
+                return { width: '230px' };
+            } else {
+                return { width: '350px' };
+            }
+        };
         return (
-            <Tilt className='grid-cols-2 m-10 rounded-lg overflow-hidden'  style={{'borderradius': '100px',width: '530px'}}>
+            <Tilt className='xl:grid-cols-2 xl:ml-10 xl:mt-2  rounded-lg overflow-hidden titl'  style={{'borderradius': '100px',...getWidthStyle()}}>
 
-            <li className="card h-96 grid-cols-2" style={{ backgroundColor: web.color, width: '530px' }}>
+            <li className="card xl:h-86 xl:grid-cols-2" style={{ backgroundColor: web.color, width: '530px' }}>
                 <a href={web.link} target='_blank' rel="noopener noreferrer"> 
                  
-                    <div className='w-full h-80'> 
+                    <div className='xl:w-full xl:h-80'> 
                         <img src={web.img} alt={web.title} className='w-full h-80 object-fit-contain'/>
                     </div>
 
@@ -78,25 +88,25 @@ const Projects = () => {
 
   return (
     <div style={{ fontFamily: 'Lumanosimo, cursive' }}>
-         <div  className='text-sm  mt-10 ml-10'> My works</div>
-        <div  className='text-2xl font-bold ml-10 mt-4'> Web development project</div>
+         <div  className='text-sm  mt-20 xl:ml-10 sm:ml-2 '> My works</div>
+        <div  className='text-2xl font-bold xl:ml-10 mt-4 mb-4 sm:ml-2'> Web development project</div>
        
    
  
           <div className='flex flex-wrap justify-center'>
                 {Webapp.map((web, index) => (
-                    <div key={index} className='w-1/2 h-96 mb-10'>
+                    <div key={index} className='xl:w-1/2 h-96 mb-10 sm:w-1 '>
                         {projectCard(web)}
                     </div>
                 ))}
             </div>
 
       
-            <div  className='text-2xl font-bold ml-10 mt-10'> Machine Learning project</div>
+            <div  className='text-2xl font-bold md:ml-10 mt-10 mb-4 sm:ml-2'> Machine Learning project</div>
             
             <div className='flex flex-wrap justify-center'>
                 {Ml.map((web, index) => (
-                    <div key={index} className='w-1/2 h-96 mb-10'>
+                    <div key={index} className='sm:w-1 md:w-1/2 h-96 md:mb-10 sm:mt-4  ' >
                         {projectCard(web)}
                     </div>
                 ))}

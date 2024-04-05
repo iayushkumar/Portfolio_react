@@ -25,3 +25,16 @@
     }
   }
   
+
+
+  @media (min-width: 640px) {
+    .titl {
+        width: 230px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .titl {
+        width: 530px;
+    }
+}

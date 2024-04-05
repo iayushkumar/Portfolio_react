@@ -4,9 +4,10 @@ const MYJOURNEY = () => {
   return (
     <div className='mb-16' style={{ fontFamily: 'Lumanosimo, cursive' }}>
 
-     
-        <div className='mt-10 ml-14'>MY JOURNEY</div>
-        <div className='ml-14 mt-10 mr-10'>
+
+<div className='md:ml-14 mt-12 font-bold text-xl border-b-orange-500 text-center sm:ml-auto sm:mr-auto sm:w-3/4'>MY JOURNEY</div>
+       {/* <div class=" md:mt-10 md:ml-14">MY JOURNEY</div> */}
+         <div className='ml-14 mt-10 mr-10'>
          
          <div className='before:content-[] before:absolute before:w-4 before:color-red-300  relative '>
           
