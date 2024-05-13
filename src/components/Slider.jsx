@@ -131,7 +131,7 @@ function Slider({hamburger,Hamburger}) {
            
 
           </div>
-        </div>b 
+        </div>
 
       
 

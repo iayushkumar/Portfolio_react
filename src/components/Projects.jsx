@@ -58,8 +58,8 @@ const Projects = () => {
 
     const projectCard = (web) => {
         const getWidthStyle = () => {
-            if (window.innerWidth >= 1280) {
-                return { width: '500px' };
+            if (window.innerWidth >= 900) {
+                return { width: '34rem' };
             } else if (window.innerWidth >= 640) {
                 return { width: '230px' };
             } else {
@@ -67,12 +67,12 @@ const Projects = () => {
             }
         };
         return (
-            <Tilt className='xl:grid-cols-2 xl:ml-10 xl:mt-2  rounded-lg overflow-hidden titl'  style={{'borderradius': '100px',...getWidthStyle()}}>
+            <Tilt className='xl:grid-cols-2 lg:ml-10 lg:mr-10 lg:mt-2  rounded-lg overflow-hidden titl'  style={{'borderradius': '100px',...getWidthStyle()}}>
 
-            <li className="card xl:h-86 xl:grid-cols-2" style={{ backgroundColor: web.color, width: '530px' }}>
+            <li className="card lg:h-86 lg:grid-cols-2" style={{ backgroundColor: web.color}}>
                 <a href={web.link} target='_blank' rel="noopener noreferrer"> 
                  
-                    <div className='xl:w-full xl:h-80'> 
+                    <div className='lg:w-full lg:h-80'> 
                         <img src={web.img} alt={web.title} className='w-full h-80 object-fit-contain'/>
                     </div>
 
@@ -88,14 +88,14 @@ const Projects = () => {
 
   return (
     <div style={{ fontFamily: 'Lumanosimo, cursive' }}>
-         <div  className='text-sm  mt-20 xl:ml-10 sm:ml-2 '> My works</div>
+         <div  className='text-sm  mt-20 lg:ml-10 sm:ml-2 '> My works</div>
         <div  className='text-2xl font-bold xl:ml-10 mt-4 mb-4 sm:ml-2'> Web development project</div>
        
    
  
           <div className='flex flex-wrap justify-center'>
                 {Webapp.map((web, index) => (
-                    <div key={index} className='xl:w-1/2 h-96 mb-10 sm:w-1 '>
+                    <div key={index} className='lg:w-1/2 h-96 mb-10 sm:w-1 '>
                         {projectCard(web)}
                     </div>
                 ))}
@@ -106,7 +106,7 @@ const Projects = () => {
             
             <div className='flex flex-wrap justify-center'>
                 {Ml.map((web, index) => (
-                    <div key={index} className='sm:w-1 md:w-1/2 h-96 md:mb-10 sm:mt-4  ' >
+                    <div key={index} className='sm:w-1 lg:w-1/2 h-96 md:mb-10 sm:mt-4  ' >
                         {projectCard(web)}
                     </div>
                 ))}
